@@ -13,7 +13,7 @@ $(function() {
 			url: $( this ).attr('action'),
 			data: $( this ).serialize(),
 			cache: false,
-			dataType: 'json',
+			dataType: 'jsonp',
 			contentType: 'application/json; charset=utf-8',
 			error: function (err) { console.log(err); },
 			success: function (data) {
