@@ -345,7 +345,7 @@ a {
 
 .feature-headline {
 	font-family: $header-font-family;
-	font-size: rem-calc(44);
+	font-size: rem-calc(35);
 	text-transform: uppercase;
 	background: $primary-color;
 	color: #fff;
@@ -365,7 +365,7 @@ a {
 	}
 
 	span {
-		font-size: rem-calc(18);
+		font-size: rem-calc(13);
 		background: $primary-color;
 		padding: 2px 2px;
 
@@ -433,9 +433,13 @@ a {
 	text-align: center;
 
 	h1 {
-		font-size: rem-calc(22);
+		font-size: rem-calc(15);
 		color: #fff;
 		margin: 0;
+
+		@include breakpoint(large) {
+			font-size: rem-calc(22);
+		}
 
 		small {
 			color: #fff;
