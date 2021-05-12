@@ -6,7 +6,7 @@ var express = require('express');
 var router = express.Router();
 var news = require('../services/news.js');
 var FB = require('fb');
-FB.setAccessToken(process.env['FB_TOKEN']);
+FB.setAccessToken(process.env.J_FB_TOKEN);
 
 
 router.use(function (req, res, next) {
