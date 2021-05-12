@@ -10,7 +10,7 @@ module.exports = {
   },
   formatdate: function(passedString, withTime) {
     var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-    var msec = new Date(passedString);
+    var msec = new Date(passedString * 1000);
     if(withTime) {
       var hour = msec.getHours();
       var ampm = 'AM';

@@ -1,0 +1,38 @@
+<div class="grid-container container-inner bg-grey">
+  <div class="grid-x align-center">
+      {{> feature smallimg="Joann-Ariola-Splash-Photo-Large.jpg" largeimg="Joann-Ariola-Splash-Photo-Large.jpg" smallimg2="Joann-Ariola-Splash-Photo-Large-2.jpg" largeimg2="Joann-Ariola-Splash-Photo-Large-2.jpg"}}
+
+    <div class="cell small-11 medium-10 large-9 section-padding">
+      <div class="grid-x align-center">
+        
+        {{> page-title title="News" }}
+
+        <div class="cell" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+          <div class="grid-x grid-margin-x align-left">
+
+            {{#each news}}
+              <div class="cell medium-6 large-6 news-item-large" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                <article>
+                  <a href="{{fields.url}}">
+                    <img src="{{fields.thumb.fields.file.url}}" alt="{{fields.headline}}" />
+                  </a>
+                  <div class="copy">
+                    <a href="{{fields.url}}" class="copy-link">
+                      <h4 class="news-headline large">{{fields.headline}}</h4>
+                      <p class="byline">By {{fields.author}}</p>
+                      <p class="news-desc">{{trim fields.description 200}}...</p>
+                    </a>
+                    <a href="{{fields.url}}" class="button outline-primary">Read More</a>
+                  </div>
+                </article>
+              </div>
+              {{/each}}
+             
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>

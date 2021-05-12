@@ -1,0 +1,77 @@
+<script src="https://www.google.com/recaptcha/api.js?render=6LfORh4aAAAAAKHUUOF4EkaZGGPJ5HOqOdzDjMWE"></script>
+
+
+ <div class="grid-container container-inner bg-grey">
+  <div class="grid-x align-center">
+      {{> feature smallimg="Joann-Ariola-Splash-Photo-Large.jpg" largeimg="Joann-Ariola-Splash-Photo-Large.jpg" smallimg2="Joann-Ariola-Splash-Photo-Large-2.jpg" largeimg2="Joann-Ariola-Splash-Photo-Large-2.jpg"}}
+    <div class="cell small-11 medium-10 large-9 section-padding">
+
+      <div class="grid-x">
+
+        {{> page-title title="Volunteer" description="There’s plenty of ways to get involved and volunteer leading up to Election Day. Together, we will win and I will always fight for the constituents of District 32!"}}
+
+        <div class="cell medium-12 form-container" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+          <div>
+            <p id="volunteer-message" >Fill out the form below to volunteer for our campaign.</p>
+            <form id="volunteer-form" method="post" action="/volunteer">
+              <div class="double-inputs">
+                <div>
+                  <label for="first_name"><strong>First Name</strong></label>
+                  <input type="text" name="first_name" id="first_name" />
+                </div>
+                <div>
+                  <label for="last_name"><strong>Last Name</strong></label>
+                  <input type="text" name="last_name" id="last_name" />
+                </div>
+              </div>
+              <label for="email"><strong>Email Address</strong></label>
+              <input type="text" name="email" id="email" />
+
+              <label for="phone"><strong>Phone Number</strong> (optional)</label>
+              <input type="text" name="phone" id="phone" />
+              <label for="party"><strong>Party Affiliation</strong> (optional)</label>
+              <select name="party" id="party">
+                <option value="">Please Select</option>
+                <option value="Democrat">Democrat</option>
+                <option value="Republican">Republican</option>
+                <option value="Other">Other</option>
+              </select>
+              <strong>How Would You Like to Help Out</strong>
+              <ul class="checkbox-list help-checkbox">
+                <li>
+                  <input id="help1" type="checkbox" name="help" value="Make Phone Calls">
+                  <label for="help1">Make Phone Calls</label>
+                </li>
+                <li>
+                  <input id="help2" type="checkbox" name="help" value="Knock on Doors">
+                  <label for="help2">Knock on Doors</label>
+                </li>
+                <li>
+                  <input id="help3" type="checkbox" name="help" value="Host a Fundraiser">
+                  <label for="help3">Host a Fundraiser</label>
+                </li>
+                <li>
+                  <input id="help4" type="checkbox" name="help" value="Put Up a Lawn Sign">
+                  <label for="help4">Put Up a Lawn Sign</label>
+                </li>
+                <li>
+                  <input id="help5" type="checkbox" name="help" value="Donate">
+                  <label for="help5">Donate</label>
+                </li>
+                <li>
+                  <input id="help6" type="checkbox" name="help"  value="I can do anything">
+                  <label for="help6">I can do anything</label>
+                </li>
+              </ul>
+              <input type="submit" value="Submit" class="button solid-primary full-width" />
+            </form>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+
+  </div>
+</div>

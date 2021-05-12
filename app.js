@@ -10,11 +10,17 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 
 var indexRouter = require('./routes/index');
+var emailRouter = require('./routes/email');
+var contactRouter = require('./routes/contact');
+var volunteerRouter = require('./routes/volunteer');
+var newsRouter = require('./routes/news');
+var bioRouter = require('./routes/bio');
 
 /* handlebars */
 const exphbs  = require('express-handlebars');
 
 var app = express();
+app.enable('trust proxy');
 
 // view engine setup
 app.engine('.hbs', exphbs({
@@ -38,6 +44,12 @@ app.use(sassMiddleware({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
+app.use('/contact', contactRouter);
+app.use('/email', emailRouter);
+app.use('/volunteer', volunteerRouter);
+app.use('/news', newsRouter);
+app.use('/bio', bioRouter);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,0 +1,8 @@
+<div class="cell quote-bar" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+	{{#each allQuotes}}
+	<div class="inner{{#if @first}} show{{/if}}">
+  	<h4 class="quote-style">{{this.fields.quote}}<h4>
+  	<p class="quote-attribute">-{{this.fields.attribution}}</p>
+  </div>
+  {{/each}}
+</div>

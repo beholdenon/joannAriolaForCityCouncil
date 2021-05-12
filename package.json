@@ -6,14 +6,19 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
+    "aos": "^2.3.4",
+    "contentful": "^8.3.5",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "~4.16.0",
     "express-handlebars": "^5.2.0",
+    "express-validator": "^6.11.0",
+    "fb": "^2.0.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0",
-    "node-sass-middleware": "0.11.0"
+    "node-sass-middleware": "0.11.0",
+    "nodemailer": "^6.6.0"
   }
 }

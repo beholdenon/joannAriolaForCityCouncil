@@ -1,26 +1,146 @@
 <div class="grid-container container-inner">
-	<div class="grid-x align-center">
-        <div class="cell feature">
-          <picture>
-            <source media="(min-width:650px)" srcset="/images/Joann-Ariola-Splash-Photo-Large.png">
-            <source media="(min-width:165px)" srcset="/images/Joann-Ariola-Splash-Photo-Large.png">
-            <img src="/images/Joann-Ariola-Splash-Photo-Large.png" alt="Joann Ariola">
-          </picture>
+    <div class="grid-x align-center">
+        
+   {{> feature smallimg="Joann-Ariola-Splash-Photo-Large.jpg" largeimg="Joann-Ariola-Splash-Photo-Large.jpg" smallimg2="Joann-Ariola-Splash-Photo-Large-2.jpg" largeimg2="Joann-Ariola-Splash-Photo-Large-2.jpg"}}
 
-          <div class="copy">
-            <div>
-                <h1>Joann Ariola for City Council</h1>
-            </div>
-            <div>
-                <h2 class="feature-headline">TOGETHER</h2>
-            </div>
-            <div>
-                <h3>we will restore New York City</h3>
-            </div>
-            <div class="donate">
-                <a href="https://www.nycvotes.org/campaigns/joannariola/contributions/new" class="button secondary large">Donate</a>
-            </div>
+    <div class="cell large-6 hp-donate-bar">
+        <div class="inner" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h3>Contribute to Our Campaign</h3>
+            <p>Joann Ariola has the local experience needed to find common-sense solutions to the current issue our District is facing, fight for our fair share from City Hall and give all of us the quality of life we deserve, so our children and grandchildren can raise their families here too.</p>
+
+            {{> donate-numbers}}
+        </div>
+    </div>
+
+    <div class="cell large-6 hp-signup-bar">
+        <div class="inner" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h3>Join Our Campaign</h3>
+            <form id="hp-join-form" action="https://joannariola.us17.list-manage.com/subscribe/post?u=d78ee7c52dcae9de24e9efe43&amp;id=cbf23801d5" method="post" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                <input type="hidden" name="b_name" id="b_name" value="7d00529cc08ebc48d83096c4f">
+                <input type="hidden" name="id" value="5e3c61dfbc">
+                <div class="double-inputs">
+                    <div>
+                        <label for="mce-FNAME">First Name</label>
+                        <input type="text" placeholder="First Name" name="FNAME" id="mce-FNAME" />
+                    </div>
+                    <div>
+                        <label for="mce-LNAME">Last Name</label>
+                        <input type="text" placeholder="Last Name" name="LNAME" id="mce-LNAME" />
+                    </div>
+                </div>
+                <label for="mce-EMAIL">E-mail Address</label>
+                <input type="email" value="" name="EMAIL" placeholder="E-mail Address" id="mce-EMAIL">
+                <label for="mce-MMERGE5">Mobile Phone</label>
+                <input type="text" placeholder="Mobile Phone (optional)" name="MMERGE5" value="" id="mce-MMERGE5" />
+                <p class="disclaimer">By submitting your cell phone number you are agreeing to receive periodic text messages from this organization. Message and data rates may apply. Text HELP for more information. Text STOP to stop receiving message</p> 
+                <input type="submit" value="Sign Up" class="button outline-white full-width" />
+            </form>
+        </div>
+    </div>
+
+    <div class="cell hp-section highlights-section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        
+        <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            Joann Ariola For City Council - District 32
+        </h3>
+        <p class="sub-head-desc" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">Joann Ariola has been living and leading in the 32nd Council District for decades.  She is a longtime Queens civic leader, wife, mother and grandmother whose career has always been focused on forging positive relationships between her neighbors and government agencies to promote peace and public safety. </p>
+
+        <a href="/news" class="button outline-primary align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">About Joann</a>
+
+    </div>
+
+    <div class="cell hp-section whyrunning-hp" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+
+        <div class="grid-x video-outer" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <div class="cell small-10 large-8 video-outer" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                <iframe src="https://www.youtube.com/embed/fSahVx_WLSg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
         </div>
+
+        <div class="videos-bg"></div>
+    </div>
+
+
+    <div class="cell hp-section facebook-hp" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                Latest From Facebook
+            </h3>
+
+            <div class="grid-x align-center">
+                <div class="cell medium-12 large-10">
+                    <ul>
+                        {{#each facebook}}
+                            <li class="social-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                                <div class="header">
+                                        <img src="/images/joann-ariola-fb-profile-pic.jpg" alt="Joann Ariola for City Council" class="social-profile-pic" />
+                                    <div class="social-account-info">
+                                        <h4><a href="https://www.facebook.com/Ariola2021">Joann Ariola 2021</a></h4>
+                                        <p>{{formatdate created_time}}</p>
+                                    </div>
+                                </div>
+                                <div class="social-photo" style="background-image: url('{{full_picture}}');">
+                                    <a href="{{permalink_url}}">
+                                        <img src="/images/social-sizer.gif" alt="Photo Placeholder" />
+                                    </a>
+                                </div>
+                                <div class="inner">
+                                    <a href="${fb.permalink_url}" class="description">
+                                        <p>{{#if message}}{{trim message 170}}...{{/if}}</p>
+                                    </a>
+                                    <a href="{{permalink_url}}" class="button fill-primary align-center">View on Facebook</a>
+                                </div>
+                            </li>
+                            {{/each}}
+                    </ul>
+                </div>
+            </div>
+
+            <a href="https://www.facebook.com/bobholdencitycouncil" class="button outline-primary align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">View More On Facebook</a>
+        </div>
+
+
+         <div class="cell hp-section news-section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        
+        <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            In The News
+        </h3>
+
+
+        <div class="grid-x news-container">
+            {{#each news}}
+            <div class="cell medium-11 large-5 news-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+                <article>
+                <a href="{{fields.url}}">
+                    <img src="{{fields.thumb.fields.file.url}}" alt="{{fields.headline}}" />
+                    <div class="copy">
+                        <h4 class="news-headline">{{fields.headline}}</h4>
+                        <p class="byline">By {{fields.author}}</p>
+                        <p class="news-desc">{{trim fields.description 90}}...</p>
+                    </div>
+                </a>
+            </article>
+            </div>
+            {{/each}}
+          </div>
+
+         <a href="/news" class="button outline-primary align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">View More News</a>
+
+        </div>
+
+
+
+
+
+
+
+
+        
+
+
+        
+
+    </div>
+
   </div>
 </div>
