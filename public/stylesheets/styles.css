@@ -10464,7 +10464,7 @@ a.underline {
   padding: 5px;
   text-align: center; }
   .feature-bar h1 {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     color: #fff;
     margin: 0; }
     @media print, screen and (min-width: 64em) {
