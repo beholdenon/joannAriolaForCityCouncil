@@ -19,7 +19,7 @@
                   <div class="copy">
                     <a href="{{fields.url}}" class="copy-link">
                       <h4 class="news-headline large">{{fields.headline}}</h4>
-                      <p class="byline">By {{fields.author}}</p>
+                      {{#if fields.author}}<p class="byline">By {{fields.author}}</p>{{/if}}
                       <p class="news-desc">{{trim fields.description 200}}...</p>
                     </a>
                     <a href="{{fields.url}}" class="button outline-primary">Read More</a>
