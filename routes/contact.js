@@ -10,7 +10,7 @@ const { body, validationResult } = require('express-validator');
 router.get('/', function(req, res, next) {
   var absoluteRoot = req.protocol + '://' + req.get('host');
 
-  res.render('contact', { 'url': absoluteRoot + req.url, 'image': absoluteRoot + '/images/og-image.jpg', 'title': 'Contact - Joann Ariola for City Council - District 32' });
+  res.render('contact', { 'url': absoluteRoot + req.url, 'image': absoluteRoot + '/images/og-image.jpg', 'title': 'Contact - ' + process.env.PAGE_TITLE });
 });
 
 
@@ -42,9 +42,9 @@ router.post('/',
     });
 
   var mailOptions = {
-    from: 'Brian Holden<bholden@battery-digital.com>',
-    to: 'bholden@battery-digital.com',
-    subject: 'Joann Ariola Contact Us Form Submission',
+    from: process.env.EMAIL_FROM,
+    to: process.env.EMAIL_TO,
+    subject: process.env.SITE_NAME + ' Contact Us Form Submission',
     html: 'First Name: ' + first_name + '<br />Last Name: ' + last_name + '<br />Email Address: ' + email + '<br />Phone Number: ' + phone + '<br />Comments: ' + comments
   };
 
@@ -57,7 +57,6 @@ router.post('/',
   });
 
   var obj = {};
-  console.log('body: ' + JSON.stringify(req.body));
   res.send("{'success': 1 }");
 });
 

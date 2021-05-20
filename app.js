@@ -22,6 +22,11 @@ const exphbs  = require('express-handlebars');
 var app = express();
 app.enable('trust proxy');
 
+//set globals
+app.locals.fb_url = process.env.FB_URL;
+app.locals.donate_url = process.env.DONATE_URL;
+app.locals.paid_for = process.env.PAID_FOR;
+
 // view engine setup
 app.engine('.hbs', exphbs({
   extname: '.hbs',

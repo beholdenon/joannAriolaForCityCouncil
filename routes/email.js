@@ -1,4 +1,6 @@
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').config();
+};
 
 var express = require('express');
 var router = express.Router();
@@ -16,8 +18,8 @@ router.get('/', function(req, res, next) {
   });
 
   var mailOptions = {
-    from: 'Robert Holden <info@holdenforcitycouncil.com>',
-    to: 'beholdenon@icloud.com',
+    from: process.env.EMAIL_FROM,
+    to: process.env.EMAIL_TO,
     subject: 'Sending Email using Node.js',
     text: 'That was easy!'
   };
@@ -30,7 +32,7 @@ router.get('/', function(req, res, next) {
     }
   });
 
-	res.render('index', { 'homepage': req.homepage, 'url': absoluteRoot + req.url, 'image': absoluteRoot + '/images/og-image.jpg', 'title': 'Re-Elect Robert Holden For City Council - District 30' });
+	res.render('index', { 'homepage': req.homepage, 'url': absoluteRoot + req.url, 'image': absoluteRoot + '/images/og-image.jpg', 'title': process.env.PAGE_TITLE });
 });
 
 module.exports = router;
