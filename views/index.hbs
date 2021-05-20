@@ -101,6 +101,27 @@
         </div>
 
 
+
+         <div class="cell hp-section endorsements-hp" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+            <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                Endorsements
+            </h3>
+
+            <div class="grid-x align-center">
+                <div class="cell medium-12 large-10">
+                    <ul class="endorsements-list">
+                        {{#each endorsements}}
+                        <li data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                            <img src="{{this.fields.logo.fields.file.url}}" alt="{{name}}" class="endorsement-logo" />
+                            <h3>{{this.fields.name}}</h3>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
          <div class="cell hp-section news-section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
         
         <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
