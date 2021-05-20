@@ -317,6 +317,8 @@ a {
 			}
 
 			&.social {
+				padding: 5px;
+
 				@include breakpoint(large) {
 					padding: 9px;
 					font-size: rem-calc(20);

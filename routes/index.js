@@ -8,7 +8,6 @@ FB.setAccessToken(process.env.J_FB_TOKEN);
 
 
 router.use(function (req, res, next) {
-
 	news.getNews().then(function (newsCollection) {
     req.news = newsCollection.items;
 

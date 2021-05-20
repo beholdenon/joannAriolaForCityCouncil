@@ -23,9 +23,11 @@ var app = express();
 app.enable('trust proxy');
 
 //set globals
-app.locals.fb_url = process.env.FB_URL;
-app.locals.donate_url = process.env.DONATE_URL;
-app.locals.paid_for = process.env.PAID_FOR;
+app.locals.FACEBOOK_USER = process.env.FACEBOOK_USER;
+app.locals.TWITTER_USER = process.env.TWITTER_USER;
+app.locals.DONATE_URL = process.env.DONATE_URL;
+app.locals.PAID_FOR = process.env.PAID_FOR;
+app.locals.META_DESCRIPTION = process.env.META_DESCRIPTION;
 
 // view engine setup
 app.engine('.hbs', exphbs({

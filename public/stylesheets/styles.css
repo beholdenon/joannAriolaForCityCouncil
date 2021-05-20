@@ -10377,10 +10377,12 @@ a.underline {
       transition: background .5s, color .5s; }
     .top-nav li a.donate-button {
       margin-right: 20px; }
-    @media print, screen and (min-width: 64em) {
-      .top-nav li a.social {
-        padding: 9px;
-        font-size: 1.25rem; } }
+    .top-nav li a.social {
+      padding: 5px; }
+      @media print, screen and (min-width: 64em) {
+        .top-nav li a.social {
+          padding: 9px;
+          font-size: 1.25rem; } }
 
 .logo {
   padding: 20px 30px; }

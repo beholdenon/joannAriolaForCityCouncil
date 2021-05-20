@@ -5,21 +5,15 @@
 		<li><a href="/news">News</a></li>
 		<li><a href="/volunteer">Volunteer</a></li>
 		<li><a href="/contact">Contact</a></li>
-		<li class="show-for-large"><a href="{{donate_url}}" class="button donate-button solid-secondary">Donate</a></li>
-		<li class="hide-for-large donate-button"><a href="{{donate_url}}">Donate</a></li>
+		<li class="show-for-large"><a href="{{DONATE_URL}}" class="button donate-button solid-secondary">Donate</a></li>
+		<li class="hide-for-large donate-button"><a href="{{DONATE_URL}}">Donate</a></li>
 
-		<li class="show-for-large">
-			<a href="{{fb_url}}" class="social">
-				<i class="brands-icon facebook"></i>
-			</a>
-		</li>
+		{{> social-icons class="show-for-large"}}
+
+
 		<li class="social hide-for-large">
 			<ul>
-				<li>
-					<a href="{{fb_url}}" class="social">
-						<i class="brands-icon facebook"></i>
-					</a>
-				</li>
+				{{> social-icons}}
 			</ul>
 		</li>
 	</ul>
