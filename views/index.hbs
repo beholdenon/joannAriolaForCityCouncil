@@ -116,7 +116,7 @@
                     <img src="{{fields.thumb.fields.file.url}}" alt="{{fields.headline}}" />
                     <div class="copy">
                         <h4 class="news-headline">{{fields.headline}}</h4>
-                        <p class="byline">By {{fields.author}}</p>
+                        {{#if fields.author}}<p class="byline">By {{fields.author}}</p>{{/if}}
                         <p class="news-desc">{{trim fields.description 90}}...</p>
                     </div>
                 </a>
