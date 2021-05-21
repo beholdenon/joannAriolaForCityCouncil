@@ -7,10 +7,8 @@ const { body, validationResult } = require('express-validator');
 
 router.get('/', function(req, res, next) {
   var absoluteRoot = req.protocol + '://' + req.get('host');
-
   res.render('contact', { 'url': absoluteRoot + req.url, 'image': absoluteRoot + '/images/og-image.jpg', 'title': 'Contact - ' + process.env.PAGE_TITLE });
 });
-
 
 router.post('/', 
   body('first_name').isLength({ min: 2 }),
@@ -19,7 +17,6 @@ router.post('/',
   body('comments').isLength({ min: 2 }),
 
   function(req, res){
-
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
