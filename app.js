@@ -25,6 +25,7 @@ app.enable('trust proxy');
 //set globals
 app.locals.FACEBOOK_USER = process.env.FACEBOOK_USER;
 app.locals.TWITTER_USER = process.env.TWITTER_USER;
+app.locals.INSTAGRAM_USER = process.env.INSTAGRAM_USER;
 app.locals.DONATE_URL = process.env.DONATE_URL;
 app.locals.PAID_FOR = process.env.PAID_FOR;
 app.locals.META_DESCRIPTION = process.env.META_DESCRIPTION;
