@@ -13,7 +13,7 @@ router.use(function (req, res, next) {
     req.news = newsCollection.items;
 
     FB.api(
-      "/" + process.env.FB_USER + "/published_posts?limit=6&date_format=U",
+      "/" + process.env.FACEBOOK_USER + "/published_posts?limit=6&date_format=U",
       { fields: ['full_picture', 'message', 'permalink_url', 'created_time'] },
       function (response) {
         if (response && !response.error) {
@@ -38,7 +38,7 @@ router.use(function (req, res, next) {
     console.log('endorsements.js - getEndorsements (line 23) error:', JSON.stringify(err,null,2))
     next();
   });
-  
+
 });
 
 /* GET home page. */
