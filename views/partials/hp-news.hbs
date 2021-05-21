@@ -1,0 +1,23 @@
+<div class="cell hp-section news-section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        In The News
+    </h3>
+    <div class="grid-x news-container">
+        {{#each news}}
+        <div class="cell medium-11 large-5 news-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
+            <article>
+                <a href="{{fields.url}}">
+                    <img src="{{fields.thumb.fields.file.url}}" alt="{{fields.headline}}" />
+                    <div class="copy">
+                        <h4 class="news-headline">{{fields.headline}}</h4>
+                        {{#if fields.author}}<p class="byline">By {{fields.author}}</p>{{/if}}
+                        <p class="news-desc">{{trim fields.description 90}}...</p>
+                    </div>
+                </a>
+            </article>
+        </div>
+        {{/each}}
+      </div>
+
+    <a href="/news" class="button outline-primary align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">View More News</a>
+</div>

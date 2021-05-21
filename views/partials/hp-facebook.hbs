@@ -1,0 +1,36 @@
+<div class="cell hp-section facebook-hp" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+    <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+        Latest From Facebook
+    </h3>
+
+    <div class="grid-x align-center">
+        <div class="cell medium-12 large-10">
+            <ul>
+                {{#each facebook}}
+                    <li class="social-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+                        <div class="header">
+                                <img src="{{../profile_pic}}" alt="{{@root.FACEBOOK_NAME}}" class="social-profile-pic" />
+                            <div class="social-account-info">
+                                <h4><a href="https://www.facebook.com/{{@root.FACEBOOK_USER}}">{{@root.FACEBOOK_NAME}}</a></h4>
+                                <p>{{formatdate created_time}}</p>
+                            </div>
+                        </div>
+                        <div class="social-photo" style="background-image: url('{{full_picture}}');">
+                            <a href="{{permalink_url}}">
+                                <img src="/images/social-sizer.gif" alt="Photo Placeholder" />
+                            </a>
+                        </div>
+                        <div class="inner">
+                            <a href="${fb.permalink_url}" class="description">
+                                <p>{{#if message}}{{trim message 170}}...{{/if}}</p>
+                            </a>
+                            <a href="{{permalink_url}}" class="button fill-primary align-center">View on Facebook</a>
+                        </div>
+                    </li>
+                    {{/each}}
+            </ul>
+        </div>
+    </div>
+
+    <a href="https://www.facebook.com/{{FACEBOOK_USER}}" class="button outline-primary align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">View More On Facebook</a>
+</div>

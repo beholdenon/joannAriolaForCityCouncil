@@ -1,6 +1,6 @@
 <div class="grid-container container-inner">
     <div class="grid-x align-center">
-        
+    env {{env}}
    {{> feature smallimg="Joann-Ariola-Splash-Photo-Large.jpg" largeimg="Joann-Ariola-Splash-Photo-Large.jpg" smallimg2="Joann-Ariola-Splash-Photo-Large-2.jpg" largeimg2="Joann-Ariola-Splash-Photo-Large-2.jpg"}}
 
     <div class="cell large-6 hp-donate-bar">
@@ -63,92 +63,15 @@
     </div>
 
 
-    <div class="cell hp-section facebook-hp" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                Latest From Facebook
-            </h3>
-
-            <div class="grid-x align-center">
-                <div class="cell medium-12 large-10">
-                    <ul>
-                        {{#each facebook}}
-                            <li class="social-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                                <div class="header">
-                                        <img src="/images/joann-ariola-fb-profile-pic.jpg" alt="Joann Ariola for City Council" class="social-profile-pic" />
-                                    <div class="social-account-info">
-                                        <h4><a href="https://www.facebook.com/Ariola2021">Joann Ariola 2021</a></h4>
-                                        <p>{{formatdate created_time}}</p>
-                                    </div>
-                                </div>
-                                <div class="social-photo" style="background-image: url('{{full_picture}}');">
-                                    <a href="{{permalink_url}}">
-                                        <img src="/images/social-sizer.gif" alt="Photo Placeholder" />
-                                    </a>
-                                </div>
-                                <div class="inner">
-                                    <a href="${fb.permalink_url}" class="description">
-                                        <p>{{#if message}}{{trim message 170}}...{{/if}}</p>
-                                    </a>
-                                    <a href="{{permalink_url}}" class="button fill-primary align-center">View on Facebook</a>
-                                </div>
-                            </li>
-                            {{/each}}
-                    </ul>
-                </div>
-            </div>
-
-            <a href="https://www.facebook.com/Ariola2021" class="button outline-primary align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">View More On Facebook</a>
-        </div>
+    {{>hp-facebook profile_pic='/images/joann-ariola-fb-profile-pic.jpg'}}
+    {{>hp-endorsements}}
+    {{>hp-news}}
 
 
-
-         <div class="cell hp-section endorsements-hp" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                Endorsements
-            </h3>
-
-            <div class="grid-x align-center">
-                <div class="cell medium-12 large-10">
-                    <ul class="endorsements-list">
-                        {{#each endorsements}}
-                        <li data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-                            <img src="{{this.fields.logo.fields.file.url}}" alt="{{name}}" class="endorsement-logo" />
-                            <h3>{{this.fields.name}}</h3>
-                        </li>
-                        {{/each}}
-                    </ul>
-                </div>
-            </div>
-        </div>
+         
 
 
-         <div class="cell hp-section news-section" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        
-        <h3 class="sub-head" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            In The News
-        </h3>
-
-
-        <div class="grid-x news-container">
-            {{#each news}}
-            <div class="cell medium-11 large-5 news-item" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-delay="100">
-                <article>
-                <a href="{{fields.url}}">
-                    <img src="{{fields.thumb.fields.file.url}}" alt="{{fields.headline}}" />
-                    <div class="copy">
-                        <h4 class="news-headline">{{fields.headline}}</h4>
-                        {{#if fields.author}}<p class="byline">By {{fields.author}}</p>{{/if}}
-                        <p class="news-desc">{{trim fields.description 90}}...</p>
-                    </div>
-                </a>
-            </article>
-            </div>
-            {{/each}}
-          </div>
-
-         <a href="/news" class="button outline-primary align-center" data-aos="fade-up" data-aos-anchor-placement="top-bottom">View More News</a>
-
-        </div>
+         
 
 
 
